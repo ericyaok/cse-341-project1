@@ -18,8 +18,7 @@ const options = {
               url: 'http://localhost:3000',
               description: 'Local server'
             }
-          ]
-        },
+          ],
         paths: {
             "/contacts": {
                 "get": {
