@@ -11,7 +11,7 @@ const options = {
         },
         servers: [
             {
-              url: 'https://your-app-name.onrender.com', // Ensure this matches your Render domain
+              url: 'https://cse-341-project1-n4qt.onrender.com', // Ensure this matches your Render domain
               description: 'Live server'
             },
             {
