@@ -6,10 +6,19 @@ const app = express();
 const port = process.env.PORT || 3000;
 const mongodb = require('./data/database');
 
-const cors = require('cors');
-app.use(cors());
+//const cors = require('cors');
+//app.use(cors());
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader(
+        'Access-Control-Allow-Headers',
+        'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
+    );
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+    next();
+});
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+//app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 app.use(bodyParser.json());
 app.use('/', require('./routes'));
 
