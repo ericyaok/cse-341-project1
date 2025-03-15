@@ -6,6 +6,9 @@ const app = express();
 const port = process.env.PORT || 3000;
 const mongodb = require('./data/database');
 
+const cors = require('cors');
+app.use(cors());
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 app.use(bodyParser.json());
 app.use('/', require('./routes'));
