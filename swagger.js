@@ -11,10 +11,15 @@ const options = {
         },
         servers: [
             {
-                url: 'https://cse-341-project1-n4qt.onrender.com/',
-                description: 'Local server',
+              url: 'https://your-app-name.onrender.com', // Ensure this matches your Render domain
+              description: 'Live server'
             },
-        ],
+            {
+              url: 'http://localhost:3000',
+              description: 'Local server'
+            }
+          ]
+        },
         paths: {
             "/contacts": {
                 "get": {
