@@ -18,7 +18,7 @@ app.use((req, res, next) => {
     next();
 });
 
-//app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 app.use(bodyParser.json());
 app.use('/', require('./routes'));
 
