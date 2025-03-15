@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Contacts Api",
-    "description": "Conatcts Api",
+    "description": "Contacts Api",
     "version": "1.0.0"
   },
   "host": "https://cse-341-project1-n4qt.onrender.com",
