@@ -5,22 +5,12 @@
     "description": "API documentation generated using swagger-autogen",
     "version": "1.0.0"
   },
-  "host": "",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
     "http"
   ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/": {
       "get": {
         "description": "",
