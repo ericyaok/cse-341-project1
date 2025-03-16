@@ -5,7 +5,7 @@
     "description": "API documentation generated using swagger-autogen",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "",
   "basePath": "/",
   "schemes": [
     "http"
