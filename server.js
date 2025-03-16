@@ -16,11 +16,12 @@ app.use('/', require('./routes'));
 
 mongodb.initDb((err) => {
     if (err) {
-        console.log(err)
-    }
-    else {
-        app.listen(port, () => (console.log(`listening on port ${port}`)));
+        console.error("Failed to initialize database:", err);
+        process.exit(1); // Exit the process if the database connection fails
+    } else {
+        app.listen(port, '0.0.0.0', () => {
+            console.log(`Server is listening on port ${port}`);
+        });
     }
 });
-
 
