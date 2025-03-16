@@ -3,11 +3,12 @@ const bodyParser = require('body-parser');
 const app = express();
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('./swagger-output.json');
+const cors = require('cors'); // Import CORS
 
 const port = process.env.PORT || 3000;
 const mongodb = require('./data/database');
 
-
+app.use(cors()); // Enable CORS for all routes
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 app.use(bodyParser.json());
